@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "line-stock",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-01",
+  "observability": { "enabled": true },
+
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "none"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "line-stock",
+      "database_id": "e3aa49dd-c238-411b-a400-fe6160f628a7",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  "vars": {
+    "ENVIRONMENT": "production",
+    "LINE_LOGIN_CHANNEL_ID": "galena14599until",
+    "LIFF_ID": "{   \"code\": \"INIT_FAILED\",   \"message\": \"Failed to init LIFF SDK\" }"
+  }
+}
